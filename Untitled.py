@@ -7,10 +7,6 @@ import seaborn as sns
 # Reading the data
 data = pd.read_csv('housing.csv')
 
-# Displaying information about the dataset and checking for null values.
-data.info()
-#the dataset present ~ 200 null values
-
 # Dropping rows with missing values and saving the changes.
 data.dropna(inplace=True)
 
@@ -28,6 +24,3 @@ y = data['median_house_value']
 
 X_train, X_test, y_train, y_test = train_test_split(x,y, test_size=0.2)
 
-# Now we'll join the 2 dataset 
-
-data
